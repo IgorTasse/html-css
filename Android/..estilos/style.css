@@ -1,0 +1,186 @@
+/*Formatando caracteres especiais*/
+@charset "UTF-8";
+/*Importando Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+/*Fontes utilizadas
+    --fonte-padrao:'Times New Roman', Times, serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+*/
+/*Cores Utilizadas
+    --cor01:#58E06A;
+    --cor02:#7FC789;
+    --cor03:#5F9466;
+    --cor04:#2E4731;
+    --cor05:#0B4713;
+*/
+:root{   /*Raíz do Documento*/
+    --cor01:#58E06A;
+    --cor02:#7FC789;
+    --cor03:#5F9466;
+    --cor04:#2E4731;
+    --cor05:#0B4713;
+    --fonte-padrao:'Times New Roman', Times, Helvetica, serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android',cursive;
+}
+/*Tirando as margens padrões do documento*/
+*{
+    padding: 0px; /*Tirando o espaçamento interno*/
+    margin: 0px;  /*Tirando as margens*/
+}
+body{
+    background-color: white; /*Cor de fundo*/
+    font-family: var(--fonte-padrao); /*Tipo da fonte*/
+}
+a.externo::after{
+    content: '\1F517\00A0' /*Adicionando emojis após os links*/
+}
+header{
+    min-height: 150px; /*Altura mínima que o header vai ter com o nav*/
+    padding-top: 20px; /*espaçamento interno do header*/
+    background-image: linear-gradient(to bottom, var(--cor05),var(--cor02),var(--cor05)); /*Cor de fundo do header*/
+    text-align: center; /*Alinhando texto ao centro*/
+}
+header > h1{
+    font-family: var(--fonte-destaque);/*Tipo de fonte*/
+    color: white; /*Cor da letra*/
+    font-weight: normal; /*Tirando o negrito*/
+    font-size: 3em; /*Tamanho da fonte*/
+    margin-bottom: 20px; /*Marge inferior*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.329); /*Sombra no texto*/
+}
+header > p{
+    color: white; /*Cor da letra*/
+    font-family: var(--fonte-padrao); /*Tipo da fonte*/
+    font-size: 1.2em; /*Tamanho da fonte*/
+    padding: 0px 10px 0px 0px; /*Espaçamento nas laterais*/
+    max-width: 500px; /*Espaçamento interno*/
+    margin: auto; /*Centralizando o bloco*/
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.329); /*Sombra no texto*/
+}
+nav{
+    background-color: var(--cor05); /*Cor de fundo do nav*/
+    padding: 10px; /*Espaçamento interno*/
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.377);/*Sombra no fundo do documento*/
+}
+nav > a{
+    color: var(--cor02);
+    text-decoration: none; /*Tira o sublinhado*/
+    border-radius: 5px; /*Bordas arredondadas nos menús*/
+    transition-duration: 0.5s; /*Duração de transição de quando o mouse passar em cima*/
+}
+nav > a:hover{
+    background-color: var(--cor03); /*Mudança de cor de quando o mouse passar em cima*/
+}
+main{
+    min-width: 300px; /*Comprimento mínimo da página*/
+    max-width: 1000px;/*Comprimento mínimo da página*/
+    margin: auto; /*Centralizando*/
+    margin-bottom: 30px; /*Margem inferior*/
+    padding: 20px; /*Espaçamento interno do main*/
+    background-color: white; /*Cor do main*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);/*Sombreamento*/
+    border-radius: 0px 0px 10px 10px; /*Bordas arredondadas*/
+}
+/* Formatando títulos do main*/
+main h1{
+    font-family: var(--fonte-android); /*Tipo de fonte*/
+    color: var(--cor05);/*Cor da fonte*/
+    font-size: 1.8em;/*Tamanho da fonte*/
+    font-weight: normal;/*Tirando negrito*/
+}
+main h2{
+    font-family: var(--fonte-android);/*Tipo de fonte*/
+    background-image: linear-gradient(to right, var(--cor03),transparent);
+    color: var(--cor04);/*Cor da fonte*/
+    font-weight: normal;/*Tirando negrito*/
+}
+/*Formatando os parágrafos*/
+main p{
+    text-indent: 30px; /*Parágrafos*/
+    line-height: 2em; /*Altura entre linhas*/
+    font-size: 1em; /*Tamanho da fonte*/
+    margin: 15px 0px;
+    text-align: justify; /*Alinhando texto*/
+}
+/*Formatando o que está em negrito*/
+main strong{   
+    color: var(--cor02);/*Cor da fonte*/
+    font-weight: bold; /*Negrito*/
+    padding: 2px 5px;
+}
+main a{
+    text-decoration: none; /*Tirando sublinhado*/
+    font-weight: bold;/*Negrito*/
+    color: var(--cor02);/*Cor da letra*/
+    background-color: var(--cor04);/*Cor do fundo*/
+    padding: 2px 6px;
+}
+main a:hover{
+    text-decoration: underline; /*Sublinhado*/
+    color: var(--cor01); /*mudança de cor*/
+}
+main img{
+    width: 100%; /*Tamanho da imagem*/
+}
+main img#pequena{
+    max-width: 360px; /*Tamanho máximo*/
+    display: block; /*Utilizado para centralizar a imagem*/
+    margin: auto; /*Centralizando a imagem*/
+}
+aside h3{
+    background-color: var(--cor04);/*cor de fundo*/
+    color: white;/*cor da letra*/
+    padding: 10px; /*espaçamento interno*/
+    margin: -10px -10px 0px -10px;/*margem*/
+    border-radius: 10px 10px 0px 0px;/*borda redonda*/
+}
+div.video{
+    background-color: white;/*cor de fundo*/
+    margin: 0px -20px 30px;/**/
+    padding: 20px;/**/
+    padding-bottom: 57%;/*espaçamento inferior*/
+    position: relative;/**/
+}
+/*Formatando responsividade do video*/
+div.video >iframe{
+    position: absolute;/**/
+    top:5%;/*topo*/
+    left:5%;/*esquerda*/
+    width: 90%;/*comprimento*/
+    height: 90%;/*altura*/
+}
+aside{
+    background-color: var(--cor02);/*cor de fundo*/
+    padding: 10px;/*espaçamento interno*/
+    border-radius: 10px;/*bordas redondas*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.397);/*sombreamento*/
+}
+aside > ul{
+    list-style-type: '\2714\00A0'; /*Colocando emoji de V nas listas*/
+    list-style-position: inside; /*Colocando os marcadores dentro do formulário*/
+    columns: 2; /*Colocando em 2 colunas (compatível com o chrome)*/
+}
+footer{
+    background-color: var(--cor05);/*cor de fundo*/
+    color: white;/*cor da letra*/
+    text-align: center;/*alinhando texto*/
+    font-size: 0.8em;/*tamanho da fonte*/
+    padding: 8px;/*Espaçamento interno*/
+}
+footer a{
+    color: white;/*Cor da letra*/
+    text-decoration: none;/*Tirando sublinhado*/
+    font-weight: bolder;/*Negrito*/
+}
+footer a:hover{
+    text-decoration: underline;/*Sublinhado*/
+    color: var(--cor01);/*Mudança da cor*/
+}
+
