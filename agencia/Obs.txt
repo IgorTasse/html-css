@@ -1,0 +1,6 @@
+CTRL + ; -> comentário
+ALT + L + O -> abrir o projeto no navegador
+site CSS TRIX -> consultar estilos visuais
+responsive viewer
+Caixas:
+	Margin -> Border -> padding -> elemento

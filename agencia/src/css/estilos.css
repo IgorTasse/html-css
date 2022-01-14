@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --cor01:#1ed760;
+    --cor02:rgb(255, 255, 255);
+    --cor03:black;
+    --cor04:#2941AB;
+    --fonte01:'Bebas Neue', cursive;
+    --fonte02:'Public Sans', sans-serif;
+}
+/*Resetando os elementos adicionados por padrão no navegador*/
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{ /*Todas as imagens terão uma largura máx de 100%*/
+    max-width: 100%;
+}
+a{ /*Tirando todos os sublinhado dos links*/
+    text-decoration: none;
+}
+ul{ /*Tirando todos os pontos das listas*/
+    list-style: none;
+}
+html{ /*Comportamento suave ao clicar nos links do menu*/
+    scroll-behavior: smooth;
+}
+/*Cabeçalho*/
+.logo .imagem{
+    width: 100px; /*Editando o tamanho da imagem do cabeçalho*/
+}
+.cabecalho{
+    background-color: var(--cor02);
+    display: flex; /*posicionamento em linha*/
+    justify-content: space-between; /*Justificando conteudo com espaçamento entre eles*/
+    align-items: center; /*Alinhanhando o menu ao centro*/
+    padding: 25px 0; /*espaçamento interno 25px pra cima e baixo e 0 pra esquerda e direita*/
+    max-width: 1500px; /*Largura máxima da tela*/
+    margin: 0 auto; /*Centralizando o conteúdo*/
+    flex-wrap: wrap; /*Conteúdo quebrando para baixo*/
+    font-family: var(--fonte02);
+}
+.logo{
+    display: flex;/*posicionamento em linha*/
+    align-items: center; /*Alinhanhando o menu ao centro*/
+    text-transform: uppercase; /*Deixa o texto em caixa alta*/
+}
+.logo .titulo{
+    margin-left: 7px;/*Espaçamento externo*/
+    font-size: 17px; /*Tamanho da fonte*/
+    transition: 0.3s ease-in-out; /*Efeito de transição*/
+    font-weight: bold; /*Negrito*/
+    color: var(--cor03); /*Cor do texto*/
+}
+.cabecalho .titulo:hover{
+    color: var(--cor01); /*Mudança de cor*/
+}
+.cabecalho .navegacao .menu{
+    display: flex;/*posicionamento em linha*/
+}
+.cabecalho .navegacao .menu .item{
+    margin: 10px; /*Espaçamento externo*/
+}
+.cabecalho .navegacao .menu .item a{
+    padding: 10px; /*Espaçamento interno geral*/
+    transition: 0.3s ease-in-out; /*Efeito de transição*/
+    color: var(--cor03); /*Cor do texto*/
+}
+.cabecalho .navegacao .menu .item a:hover{
+    background-color: var(--cor01); /*Mudança de cor de fundo*/
+    color: var(--cor02); /*Mudança de cor da letra*/
+}
+@media(max-width:624px){
+    .cabecalho{
+        justify-content: center;/*Justificando conteudo ao centro*/
+    }
+    .cabecalho .logo{
+        margin-bottom: 30px; /*Margem inferior do cabeçalho*/
+    }
+    .cabecalho .menu .item a{
+        font-size: calc(0.6em +1vw);/*Calculando tamanho da fonte (medida absoluta + tamanho da tela)*/
+    }
+}
+/*Cabeçalho*/
+
+/* Painel */
+.conteudo-principal .paineis{
+    display: flex; /*posicionamento em linha*/
+    justify-content: center; /*Centralizando conteúdo*/
+    align-items: center; /*alinhando ao centro*/
+    height: 700px; /*Altura*/
+    position: relative; /*Posicionamento de itens*/
+}
+.conteudo-principal .paineis .titulo{
+    color: var(--cor02); /*Cor do
+     título*/
+    text-transform: uppercase; /*Colocando texto em caixa alta*/
+    font-size: calc(1em + 1vw); /*Calculando tamanho da fonte (medida absoluta + tamanho da tela)*/
+}
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat; /*Não repetir a imagem*/
+    background-size: cover; /*Ocupar o espaço total*/
+    background-position: center; /*Imagem centralizada*/
+    min-width: 100%; /*Largura*/
+    height: 100%; /*Altura*/
+    position: absolute; /*Posicionando itens*/
+    z-index: -1; /*Colocando a imagem abaixo (camadas)*/
+    filter: brightness(70%); /*Configurando brilho da imagem*/
+}
+.conteudo-principal .paineis .projeto1{
+    background-image: url('../imagens/painel1.jpg'); /*Inserindo imagem 1 no painel*/
+}
+.conteudo-principal .paineis .projeto2{
+    background-image: url('../imagens/painel2.jpg'); /*Inserindo imagem 2 no painel*/
+}
+.conteudo-principal .paineis .projeto3{
+    background-image: url('../imagens/painel3.jpg');/*Inserindo imagem 3 no painel*/
+}
+.conteudo-principal .paineis .seta{
+    background-image: url('../imagens/seta.png');/*Inserido a imagem das setas do painel*/
+    background-repeat: no-repeat; /*Não repetir a imagem*/
+    background-position: center; /*centralizando as setas*/
+    background-size: contain;
+    width: 50px; /*Largura da seta*/
+    height: 50px; /*Altura da seta*/
+    position: absolute; /*Posicionando itens*/
+    text-indent: 100% ; /*Escondendo texto de um elemento*/
+    overflow: hidden; /*Escondendo texto de um elemento*/
+}
+.conteudo-principal .paineis .seta.btn-voltar{
+    left: 20px; /*alinhando a esquerda*/
+    transform: rotateY(180deg); /*Rotacionando o botão*/
+}
+.conteudo-principal .paineis .seta.btn-avancar{
+    right: 20px; /*alinhando a direita*/
+}
+@media(max-width:900px){
+    .conteudo-principal .paineis{
+        height: 500px; /*Altura */
+    }
+}
+/* Painel */
+
+/* Quem somos */
+.quem-somos{
+    background-color: var(--cor04);
+}
+.quem-somos .conteudo{
+    display: flex; /*posicionamento em linha*/
+    align-items: center; /*alinhando ao centro*/
+    padding: 0 10%; /*Espaçamento interno nas laterais*/
+}
+.quem-somos .conteudo .informacoes{
+    width: 40%; /*Largura do texto*/
+}
+.quem-somos .conteudo .imagem{
+    width: 60%; /*Largura da imagem*/
+}
+.quem-somos .conteudo .informacoes .titulo{
+    font-size: 50px; /*Tamanho da fonte*/
+    color: var(--cor01);/*Cor do texto*/
+    margin-bottom: 20px;/*Margem inferior*/
+    font-family: var(--fonte01);
+}
+.quem-somos .conteudo .informacoes .texto{
+    font-size: 20px; /*Tamanho da fonte*/
+    line-height: 1.5; /*Espaçamento das linhas*/
+    color: var(--cor02); /*Cor do texto*/
+    font-weight: 400;
+    font-family: var(--fonte02);
+}
+@media(max-width:1200px){
+    .quem-somos .conteudo{
+        display: flex;
+        text-align: center; /*Texto alinhado */
+        padding: 100px 20px; /*Espaçamento interno*/
+    }
+    .quem-somos .conteudo .imagem{
+        width: 100%; /*Tamanho da imagem*/
+    }
+    .quem-somos .conteudo .informacoes{
+        width: 100%; 
+    }
+}
+/* Quem somos */
+
+/* Rodapé */
+.rodape{
+    padding: 80px 0 20px 0; /*Espaçamento interno (cima, direita, baixo, esquerda*/
+    font-family: var(--fonte02);
+}
+.rodape .navegacao{
+    max-width: 1500px; /*Largura*/
+    margin: 0 auto; /*Centralizando*/
+    display: flex; /*Posicionando em linha*/
+    justify-content: space-between; /*Conteudo justificado com espaço entre eles*/
+    align-items: center; /*Alinhando verticalmente ao centro*/
+    flex-wrap: wrap;
+}
+.rodape .navegacao .logo .imagem{
+    width: 100px; /*Comprimento*/
+}
+.rodape .redes-sociais{
+    display: flex; /*Posicionando em linha*/
+}
+.rodape .redes-sociais a{
+    display: flex;/*Posicionando em linha*/
+    justify-content: center; /*Conteudo justificado centralizado*/
+    margin: 0 10px; /*Margem nas laterais*/
+    font-size: 30px; /*Tamanho da fonte*/
+    border: 2px solid black; /*Borda do icone*/
+    border-radius: 50%; /*borda do icone*/
+    padding: 15px; /*Espaçamento interno do icone*/
+    width: 65px; /*Arredondando o icone*/
+    transition: 0.3s ease-in-out; /*Tempo de duração da transição*/
+}
+.rodape .redes-sociais a:hover{
+    background-color: var(--cor01); /*Mudança de cor ao passar no icone*/
+}
+.rodape .copyright{
+    margin-top: 70px; /*Margem do topo*/
+    text-align: center; /*texto centralizado*/
+}
+@media(max-width: 940px){
+    .rodape .navegacao{
+        justify-content: center; /*Conteudo justificado ao centro*/
+    }
+    .rodape .navegacao .logo{
+        margin-bottom: 30px; /*Margem inferior*/
+    }
+}
+/* Rodapé */
