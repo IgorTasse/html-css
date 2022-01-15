@@ -1,0 +1,102 @@
+/*Importando fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    /*Paleta de Cores*/
+    /*Primárias*/
+    --cor01: hsl(215, 51%, 70%);
+    --cor02:hsl(178, 100%, 50%);
+    /*Neutra*/
+    --cor03: hsl(217, 54%, 11%); /*main BG*/
+    --cor04: hsl(216, 50%, 16%);/*card BG*/
+    --cor05: hsl(215, 32%, 27%);/*line*/
+    --cor06: hsl(0, 0%, 100%);
+    /*Fonte*/
+    --fonte01:'Outfit', sans-serif;
+    --tamanho-paragrafo: 18px;
+}
+/*Resetando elementos adicionados por padrão no navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{/*Todas as imagens terão uma largura máx de 100%*/
+    max-width: 100%;
+}
+a{ /*Tirando todos os sublinhado dos links*/
+    text-decoration: none;
+}
+/*Cor de Fundo*/
+body{
+    background-color: var(--cor03);
+    color: var(--cor06);
+}
+/*Cartão*/
+.fundo{
+padding: 100px;
+}
+.frente{
+    background-color: var(--cor04);
+    max-width: 300px;
+    padding: var(--tamanho-paragrafo);
+    margin: 0 auto;
+    border-radius: 15px;
+
+}
+.fundo .topo .foto .imagem{
+    width: 300px;
+    border-radius: 10px;
+}
+/*Cabeçalho*/
+/*Principal*/
+.fundo .frente .principal .titulo{
+    font-family: var(--fonte01);
+    font-size: 1.1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--cor06);
+}
+.fundo .frente .principal .texto{
+    font-family: var(--fonte01);
+    font-size: 0.9em;
+    padding-bottom: 10px;
+    color:var(--cor01) ;
+}
+.fundo .frente .principal .textos{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.fundo .frente .principal .texto2{
+    color: var(--cor02);
+    font-family: var(--fonte01);
+}
+.fundo .frente .principal .texto3{
+    color: var(--cor01);
+    font-family: var(--fonte01);
+}
+.fundo .frente .line{ 
+	border: 1px solid; 
+	border-color: var(--cor05);
+}
+/*Principal*/
+
+/* Rodapé */
+.fundo .frente .rodape{
+    display: flex;
+    align-items: center; 
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.fundo .frente .rodape .foto{
+    width: 30px;
+    padding-right: 10px;
+}
+.fundo .frente .rodape .texto{
+    color: var(--cor01);
+}
+.fundo .frente .rodape .texto .nome{
+    color: var(--cor06);
+    padding-left: 6px;
+}
+/* Rodapé */
