@@ -226,8 +226,7 @@ html{ /*Comportamento suave ao clicar nos links do menu*/
     .rodape .navegacao{
         justify-content: center; /*Conteudo justificado ao centro*/
     }
-    .rodape .navegacao .logo{
+    .rodape .navegacao .logo, .rodape .navegacao .redes-sociais{
         margin-bottom: 30px; /*Margem inferior*/
+        justify-content: center; /*Conteudo justificado ao centro*/
     }
-}
-/* Rodapé */
