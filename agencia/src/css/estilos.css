@@ -107,6 +107,8 @@ html{ /*Comportamento suave ao clicar nos links do menu*/
     position: absolute; /*Posicionando itens*/
     z-index: -1; /*Colocando a imagem abaixo (camadas)*/
     filter: brightness(70%); /*Configurando brilho da imagem*/
+    opacity: 0; /*Escondendo imagens opacity = 0 Aparecendo as imagens opacity = 1 */
+    transition: 0.3s ease-in-out; /*Transição da animação*/
 }
 .conteudo-principal .paineis .projeto1{
     background-image: url('../imagens/painel1.jpg'); /*Inserindo imagem 1 no painel*/
@@ -116,6 +118,9 @@ html{ /*Comportamento suave ao clicar nos links do menu*/
 }
 .conteudo-principal .paineis .projeto3{
     background-image: url('../imagens/painel3.jpg');/*Inserindo imagem 3 no painel*/
+}
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1; /*Aparecendo as imagens utilizando a classe modificadora (mostrar)*/
 }
 .conteudo-principal .paineis .seta{
     background-image: url('../imagens/seta.png');/*Inserido a imagem das setas do painel*/
@@ -229,4 +234,5 @@ html{ /*Comportamento suave ao clicar nos links do menu*/
     .rodape .navegacao .logo, .rodape .navegacao .redes-sociais{
         margin-bottom: 30px; /*Margem inferior*/
         justify-content: center; /*Conteudo justificado ao centro*/
+    }
     }

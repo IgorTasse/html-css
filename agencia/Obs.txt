@@ -1,3 +1,4 @@
+shift + alt + f -> organizar o codigo
 CTRL + ; -> comentário
 ALT + L + O -> abrir o projeto no navegador
 site CSS TRIX -> consultar estilos visuais
