@@ -155,12 +155,13 @@ html{ /*Comportamento suave ao clicar nos links do menu*/
     display: flex; /*posicionamento em linha*/
     align-items: center; /*alinhando ao centro*/
     padding: 0 10%; /*Espaçamento interno nas laterais*/
+    margin: 0 auto; /*Centralizando o conteúdo*/
 }
 .quem-somos .conteudo .informacoes{
-    width: 40%; /*Largura do texto*/
+    width: 100%; /*Largura do texto*/
 }
 .quem-somos .conteudo .imagem{
-    width: 60%; /*Largura da imagem*/
+    width: 50%; /*Largura da imagem*/
 }
 .quem-somos .conteudo .informacoes .titulo{
     font-size: 50px; /*Tamanho da fonte*/
@@ -178,7 +179,8 @@ html{ /*Comportamento suave ao clicar nos links do menu*/
 @media(max-width:1200px){
     .quem-somos .conteudo{
         display: flex;
-        text-align: center; /*Texto alinhado */
+        flex-wrap: wrap; /*Conteúdo quebrando para baixo*/
+        text-align: justify; /*Texto alinhado */
         padding: 100px 20px; /*Espaçamento interno*/
     }
     .quem-somos .conteudo .imagem{
